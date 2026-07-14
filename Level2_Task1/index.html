@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stage">
+    <header class="brand">
+      <span class="dot"></span>
+      <h1>CALC<span>/</span>OS</h1>
+    </header>
+
+    <main class="calculator" id="calculator">
+      <div class="screen">
+        <div class="history" id="history">&nbsp;</div>
+        <div class="display" id="display">0</div>
+      </div>
+
+      <div class="keys">
+        <button class="key fn" data-action="clear">AC</button>
+        <button class="key fn" data-action="sign">+/−</button>
+        <button class="key fn" data-action="percent">%</button>
+        <button class="key op" data-value="/">÷</button>
+
+        <button class="key num" data-value="7">7</button>
+        <button class="key num" data-value="8">8</button>
+        <button class="key num" data-value="9">9</button>
+        <button class="key op" data-value="*">×</button>
+
+        <button class="key num" data-value="4">4</button>
+        <button class="key num" data-value="5">5</button>
+        <button class="key num" data-value="6">6</button>
+        <button class="key op" data-value="-">−</button>
+
+        <button class="key num" data-value="1">1</button>
+        <button class="key num" data-value="2">2</button>
+        <button class="key num" data-value="3">3</button>
+        <button class="key op" data-value="+">+</button>
+
+        <button class="key num zero" data-value="0">0</button>
+        <button class="key num" data-value=".">.</button>
+        <button class="key eq" data-action="equals">=</button>
+      </div>
+    </main>
+
+    <footer class="footnote">
+      <span>◍ keyboard supported</span>
+      <span>↵ enter = · esc clear · ⌫ backspace</span>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
