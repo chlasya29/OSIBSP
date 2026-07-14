@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Auth System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="auth-container">
+        <div id="login-box" class="auth-box">
+            <h2>Welcome Back</h2>
+            <p class="subtitle">Please enter your details to sign in</p>
+            <div id="login-error" class="error-msg hidden"></div>
+            
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="login-username">Username</label>
+                    <input type="text" id="login-username" required placeholder="Enter username">
+                </div>
+                <div class="input-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required placeholder="Enter password">
+                </div>
+                <button type="submit" class="btn">Sign In</button>
+            </form>
+            <p class="switch-text">Don't have an account? <a href="#" id="to-register">Register here</a></p>
+        </div>
+
+        <div id="register-box" class="auth-box hidden">
+            <h2>Create Account</h2>
+            <p class="subtitle">Join us today! It only takes a minute</p>
+            <div id="register-error" class="error-msg hidden"></div>
+            <div id="register-success" class="success-msg hidden"></div>
+
+            <form id="register-form">
+                <div class="input-group">
+                    <label for="register-username">Choose Username</label>
+                    <input type="text" id="register-username" required placeholder="Minimum 3 characters">
+                </div>
+                <div class="input-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" required placeholder="Minimum 6 characters">
+                </div>
+                <button type="submit" class="btn">Register</button>
+            </form>
+            <p class="switch-text">Already have an account? <a href="#" id="to-login">Login here</a></p>
+        </div>
+
+        <div id="secure-box" class="auth-box hidden secured">
+            <div class="badge">Protected Area</div>
+            <h2>Welcome to the Dashboard</h2>
+            <p class="subtitle">Hello, <span id="user-display"></span>! You have successfully authenticated.</p>
+            
+            <div class="secure-content">
+                <p><strong>Status:</strong> Session Active ✅</p>
+            </div>
+
+            <button id="logout-btn" class="btn btn-secondary">Log Out</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
